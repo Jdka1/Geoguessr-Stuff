@@ -1,0 +1,26 @@
+{
+    "manifest_version": 3,
+    "name": "Geoguessr",
+    "version": "0.1.0",
+    "action": {
+      "default_popup": "src/popup.html"
+    },
+    "background": {
+      "service_worker": "src/background.js"
+    },
+    "content_scripts": [
+      {
+        "js": ["src/content_script.js"],
+        "matches": ["<all_urls>"]
+      }
+    ],
+    "permissions": [
+      "<all_urls>"
+    ],
+    "web_accessible_resources": [
+      {
+        "resources": ["src/popup.js", "content_script.js"],
+        "matches": ["<all_urls>"]
+      }
+    ]
+}

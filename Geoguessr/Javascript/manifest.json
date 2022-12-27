@@ -1,0 +1,26 @@
+{
+    "manifest_version": 2,
+    "name": "Geoguessr Hacks",
+    "version": "1.0",
+    "browser_action": {
+        "default_icon": "icon.png",
+        "default_popup": "popup.html",
+        "default_title": "chrome extension"
+    },
+    "permissions": [
+        "activeTab"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": ["content.js"]
+        }
+    ],
+    "web_accessible_resources": [
+        "script.js"
+    ]
+}
+
+
